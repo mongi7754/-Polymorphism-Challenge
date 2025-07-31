@@ -1,2 +1,0 @@
-# -Polymorphism-Challenge
- Polymorphism Challenge

@@ -1,0 +1,81 @@
+# -Polymorphism-Challenge
+ Polymorphism Challenge
+class Vehicle:
+    def move(self):
+        raise NotImplementedError("Subclasses must implement move()")
+
+class Animal:
+    def move(self):
+        raise NotImplementedError("Subclasses must implement move()")
+
+# Vehicle Implementations
+class Car(Vehicle):
+    def move(self):
+        return "Driving on the road 🚗"
+
+class Airplane(Vehicle):
+    def move(self):
+        return "Flying through the sky ✈️"
+
+class Boat(Vehicle):
+    def move(self):
+        return "Sailing on water ⛵"
+
+class Bicycle(Vehicle):
+    def move(self):
+        return "Pedaling on a path 🚲"
+
+class Rocket(Vehicle):
+    def move(self):
+        return "Blasting into space 🚀"
+
+# Animal Implementations
+class Bird(Animal):
+    def move(self):
+        return "Flying through the air 🕊️"
+
+class Fish(Animal):
+    def move(self):
+        return "Swimming in water 🐟"
+
+class Snake(Animal):
+    def move(self):
+        return "Slithering on the ground 🐍"
+
+class Kangaroo(Animal):
+    def move(self):
+        return "Hopping across terrain 🦘"
+
+class Monkey(Animal):
+    def move(self):
+        return "Swinging through trees 🐒"
+
+def main():
+    # Create a collection of vehicles
+    vehicles = [
+        Car(),
+        Airplane(),
+        Boat(),
+        Bicycle(),
+        Rocket()
+    ]
+    
+    # Create a collection of animals
+    animals = [
+        Bird(),
+        Fish(),
+        Snake(),
+        Kangaroo(),
+        Monkey()
+    ]
+    
+    print("=== VEHICLE MOVEMENT ===")
+    for vehicle in vehicles:
+        print(f"- {vehicle.move()}")
+    
+    print("\n=== ANIMAL MOVEMENT ===")
+    for animal in animals:
+        print(f"- {animal.move()}")
+
+if __name__ == "__main__":
+    main()
